@@ -105,39 +105,6 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (SpecialFunction != null) {
             switch (SpecialFunction) {
-                case "log":
-                    value1 = input.getText().toString();
-                    num1 = Double.parseDouble(value1);
-                    input.setText(Math.log10(num1) + "");
-                    SpecialFunction = null;
-                    IsSpecial = false;
-                    signbox.setText(null);
-                    break;
-                case "ln":
-                    value1 = input.getText().toString();
-                    num1 = Double.parseDouble(value1);
-                    input.setText(Math.log(num1) + "");
-                    SpecialFunction = null;
-                    IsSpecial = false;
-                    signbox.setText(null);
-                    break;
-                case "sqrt":
-                    value1 = input.getText().toString();
-                    num1 = Double.parseDouble(value1);
-                    input.setText(Math.sqrt(num1) + "");
-                    SpecialFunction = null;
-                    IsSpecial = false;
-                    signbox.setText(null);
-                    break;
-                case "x^n":
-                    value2 = input.getText().toString();
-                    num1 = Double.parseDouble(value1);
-                    num2 = Double.parseDouble(value2);
-                    input.setText(Math.pow(num1, num2) + "");
-                    SpecialFunction = null;
-                    IsSpecial = false;
-                    signbox.setText(null);
-                    break;
                 case "1/x":
                     num1 = Double.parseDouble(value1);
                     if(num1!=0.0){
@@ -151,19 +118,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
 
-
-                case "!":
-                    int i = Integer.parseInt(value1);
-                    double num1 = 1.0;
-                    while (i > 0) {
-                        num1 = num1 * i;
-                        i--;
-                    }
-                    input.setText(num1 + "");
-                    SpecialFunction = null;
-                    IsSpecial = false;
-                    signbox.setText(null);
-                    break;
                 case "Cos":
                     value1 = input.getText().toString();
                     num1 = Double.parseDouble(value1);
@@ -234,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
         else input.setText(null);
     }
 
-    public void btnClick_dot(View view) {
+    /*public void btnClick_dot(View view) {
         if (!hasDot) {
             if (input.getText().equals("")) {
                 input.setText("0.");
@@ -243,9 +197,9 @@ public class MainActivity extends AppCompatActivity {
             }
             hasDot = true;
         }
-    }
+    }*/
 
-    public void btnClick_Delete(View view) {
+    /*public void btnClick_Delete(View view) {
         if (input.getText().equals("")) {
             input.setText(null);
         } else {
@@ -259,9 +213,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-    }
+    }*/
 
-    public void btnClick_log(View view) {
+    /*public void btnClick_log(View view) {
         SpecialFunction = "log";
         hasDot = false;
         IsSpecial = true;
@@ -304,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
         value1 = input.getText().toString();
         input.setText(value1 + "");
         signbox.setText(value1+"!");
-    }
+    }*/
 
     public void btnClick_Sin(View view) {
         SpecialFunction = "Sin";
